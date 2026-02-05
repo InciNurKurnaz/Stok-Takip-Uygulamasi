@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stok Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-chart-pie"></i> Dashboard</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Ürünler</a>
+                <a href="movements.html" class="nav-link">Hareketler</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+            </nav>
+        </header>
+
+        <!-- İstatistik Kartları -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalProducts">0</h3>
+                        <p>Toplam Ürün</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card success">
+                    <div class="stat-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalStock">0</h3>
+                        <p>Toplam Stok</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card warning">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="lowStockProducts">0</h3>
+                        <p>Düşük Stok</p>
+                    </div>
+                </div>
+
+                <div class="stat-card info">
+                    <div class="stat-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalMovements">0</h3>
+                        <p>Toplam Hareket</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grafikler -->
+        <section class="charts-section">
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3><i class="fas fa-chart-pie"></i> Stok Dağılımı</h3>
+                    <canvas id="stockChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3><i class="fas fa-chart-bar"></i> Hareket Grafiği</h3>
+                    <canvas id="movementChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uyarılar ve Son Hareketler -->
+        <section class="alerts-section">
+            <div class="alerts-grid">
+                <!-- Düşük Stok Uyarıları -->
+                <div class="alert-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Düşük Stok Uyarıları</h3>
+                    <div id="lowStockAlerts" class="alerts-list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </div>
+                </div>
+                
+                <!-- Son Hareketler -->
+                <div class="alert-card">
+                    <h3><i class="fas fa-history"></i> Son Hareketler</h3>
+                    <div id="recentMovements" class="alerts-list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts - script.js ÖNCE yüklenmeli! -->
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

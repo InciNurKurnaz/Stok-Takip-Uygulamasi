@@ -1,0 +1,286 @@
+{
+  "products": [
+    {
+      "id": "m1a2b3c4d",
+      "sku": "LAP001",
+      "name": "HP Pavilion Laptop",
+      "description": "Intel i5, 8GB RAM, 256GB SSD",
+      "quantity": 15,
+      "minStock": 5,
+      "createdAt": "2026-02-01T10:00:00.000Z",
+      "updatedAt": "2026-02-05T14:30:00.000Z"
+    },
+    {
+      "id": "m5e6f7g8h",
+      "sku": "MOU001",
+      "name": "Logitech Wireless Mouse",
+      "description": "Kablosuz optik mouse",
+      "quantity": 3,
+      "minStock": 10,
+      "createdAt": "2026-02-01T10:05:00.000Z",
+      "updatedAt": "2026-02-05T12:00:00.000Z"
+    },
+    {
+      "id": "m9i0j1k2l",
+      "sku": "KEY001",
+      "name": "Mechanical Keyboard",
+      "description": "RGB ışıklı mekanik klavye",
+      "quantity": 25,
+      "minStock": 8,
+      "createdAt": "2026-02-02T09:00:00.000Z",
+      "updatedAt": "2026-02-04T16:45:00.000Z"
+    },
+    {
+      "id": "m3n4o5p6q",
+      "sku": "MON001",
+      "name": "Samsung 24 Monitor",
+      "description": "Full HD IPS panel",
+      "quantity": 0,
+      "minStock": 3,
+      "createdAt": "2026-02-02T11:30:00.000Z",
+      "updatedAt": "2026-02-05T09:15:00.000Z"
+    },
+    {
+      "id": "m7r8s9t0u",
+      "sku": "HDD001",
+      "name": "Seagate 1TB HDD",
+      "description": "7200RPM dahili hard disk",
+      "quantity": 45,
+      "minStock": 15,
+      "createdAt": "2026-02-03T08:00:00.000Z",
+      "updatedAt": "2026-02-05T11:00:00.000Z"
+    },
+    {
+      "id": "ml9xzk7ji8yt8ezw3",
+      "sku": "LAP001",
+      "name": "HP Pavilion Laptop",
+      "description": "Intel i5, 8GB RAM, 256GB SSD",
+      "quantity": 15,
+      "minStock": 5,
+      "createdAt": "2026-02-05T21:02:01.231Z",
+      "updatedAt": "2026-02-05T21:02:01.231Z"
+    },
+    {
+      "id": "ml9xzk7jllai2hu9p",
+      "sku": "MOU001",
+      "name": "Logitech Wireless Mouse",
+      "description": "Kablosuz optik mouse",
+      "quantity": 3,
+      "minStock": 10,
+      "createdAt": "2026-02-05T21:02:01.231Z",
+      "updatedAt": "2026-02-05T21:02:01.231Z"
+    },
+    {
+      "id": "ml9xzk7j19u177bj1",
+      "sku": "KEY001",
+      "name": "Mechanical Keyboard",
+      "description": "RGB ışıklı mekanik klavye",
+      "quantity": 25,
+      "minStock": 8,
+      "createdAt": "2026-02-05T21:02:01.231Z",
+      "updatedAt": "2026-02-05T21:02:01.231Z"
+    },
+    {
+      "id": "ml9xzk7j3889xv1mg",
+      "sku": "MON001",
+      "name": "Samsung 24\" Monitor",
+      "description": "Full HD IPS panel",
+      "quantity": 0,
+      "minStock": 3,
+      "createdAt": "2026-02-05T21:02:01.231Z",
+      "updatedAt": "2026-02-05T21:02:01.231Z"
+    },
+    {
+      "id": "ml9xzk7jaf236oxsf",
+      "sku": "HDD001",
+      "name": "Seagate 1TB HDD",
+      "description": "7200RPM dahili hard disk",
+      "quantity": 45,
+      "minStock": 15,
+      "createdAt": "2026-02-05T21:02:01.231Z",
+      "updatedAt": "2026-02-05T21:02:01.231Z"
+    }
+  ],
+  "movements": [
+    {
+      "id": "mv001",
+      "productId": "m1a2b3c4d",
+      "productName": "HP Pavilion Laptop",
+      "productSku": "LAP001",
+      "type": "in",
+      "quantity": 20,
+      "previousStock": 0,
+      "newStock": 20,
+      "reason": "Tedarikçiden alım",
+      "createdAt": "2026-02-01T10:00:00.000Z"
+    },
+    {
+      "id": "mv002",
+      "productId": "m1a2b3c4d",
+      "productName": "HP Pavilion Laptop",
+      "productSku": "LAP001",
+      "type": "out",
+      "quantity": 5,
+      "previousStock": 20,
+      "newStock": 15,
+      "reason": "Müşteri satışı",
+      "createdAt": "2026-02-05T14:30:00.000Z"
+    },
+    {
+      "id": "mv003",
+      "productId": "m5e6f7g8h",
+      "productName": "Logitech Wireless Mouse",
+      "productSku": "MOU001",
+      "type": "in",
+      "quantity": 50,
+      "previousStock": 0,
+      "newStock": 50,
+      "reason": "Depo transferi",
+      "createdAt": "2026-02-01T10:05:00.000Z"
+    },
+    {
+      "id": "mv004",
+      "productId": "m5e6f7g8h",
+      "productName": "Logitech Wireless Mouse",
+      "productSku": "MOU001",
+      "type": "out",
+      "quantity": 47,
+      "previousStock": 50,
+      "newStock": 3,
+      "reason": "Toptan satış",
+      "createdAt": "2026-02-05T12:00:00.000Z"
+    },
+    {
+      "id": "mv005",
+      "productId": "m9i0j1k2l",
+      "productName": "Mechanical Keyboard",
+      "productSku": "KEY001",
+      "type": "in",
+      "quantity": 30,
+      "previousStock": 0,
+      "newStock": 30,
+      "reason": "Tedarikçiden alım",
+      "createdAt": "2026-02-02T09:00:00.000Z"
+    },
+    {
+      "id": "mv006",
+      "productId": "m9i0j1k2l",
+      "productName": "Mechanical Keyboard",
+      "productSku": "KEY001",
+      "type": "out",
+      "quantity": 5,
+      "previousStock": 30,
+      "newStock": 25,
+      "reason": "Online sipariş",
+      "createdAt": "2026-02-04T16:45:00.000Z"
+    },
+    {
+      "id": "mv007",
+      "productId": "m3n4o5p6q",
+      "productName": "Samsung 24 Monitor",
+      "productSku": "MON001",
+      "type": "in",
+      "quantity": 10,
+      "previousStock": 0,
+      "newStock": 10,
+      "reason": "Sayım düzeltmesi",
+      "createdAt": "2026-02-02T11:30:00.000Z"
+    },
+    {
+      "id": "mv008",
+      "productId": "m3n4o5p6q",
+      "productName": "Samsung 24 Monitor",
+      "productSku": "MON001",
+      "type": "out",
+      "quantity": 10,
+      "previousStock": 10,
+      "newStock": 0,
+      "reason": "Bayi satışı",
+      "createdAt": "2026-02-05T09:15:00.000Z"
+    },
+    {
+      "id": "mv009",
+      "productId": "m7r8s9t0u",
+      "productName": "Seagate 1TB HDD",
+      "productSku": "HDD001",
+      "type": "in",
+      "quantity": 50,
+      "previousStock": 0,
+      "newStock": 50,
+      "reason": "Tedarikçiden alım",
+      "createdAt": "2026-02-03T08:00:00.000Z"
+    },
+    {
+      "id": "mv010",
+      "productId": "m7r8s9t0u",
+      "productName": "Seagate 1TB HDD",
+      "productSku": "HDD001",
+      "type": "out",
+      "quantity": 5,
+      "previousStock": 50,
+      "newStock": 45,
+      "reason": "Müşteri satışı",
+      "createdAt": "2026-02-05T11:00:00.000Z"
+    },
+    {
+      "id": "ml9xzk7jucyd4sj1f",
+      "productId": "ml9xzk7ji8yt8ezw3",
+      "productName": "HP Pavilion Laptop",
+      "productSku": "LAP001",
+      "type": "in",
+      "quantity": 15,
+      "previousStock": 0,
+      "newStock": 15,
+      "reason": "İade girişi",
+      "createdAt": "2026-02-05T19:38:07.949Z"
+    },
+    {
+      "id": "ml9xzk7jfzcvanymm",
+      "productId": "ml9xzk7ji8yt8ezw3",
+      "productName": "HP Pavilion Laptop",
+      "productSku": "LAP001",
+      "type": "out",
+      "quantity": 5,
+      "previousStock": 20,
+      "newStock": 15,
+      "reason": "Müşteri satışı",
+      "createdAt": "2026-02-03T18:08:10.140Z"
+    },
+    {
+      "id": "ml9xzk7j16vpza40k",
+      "productId": "ml9xzk7jllai2hu9p",
+      "productName": "Logitech Wireless Mouse",
+      "productSku": "MOU001",
+      "type": "in",
+      "quantity": 3,
+      "previousStock": 0,
+      "newStock": 3,
+      "reason": "Tedarikçiden alım",
+      "createdAt": "2026-02-05T02:13:11.710Z"
+    },
+    {
+      "id": "ml9xzk7jn0pmqlyfi",
+      "productId": "ml9xzk7j19u177bj1",
+      "productName": "Mechanical Keyboard",
+      "productSku": "KEY001",
+      "type": "in",
+      "quantity": 25,
+      "previousStock": 0,
+      "newStock": 25,
+      "reason": "İade girişi",
+      "createdAt": "2026-01-31T13:22:02.231Z"
+    },
+    {
+      "id": "ml9xzk7ju2y291b7n",
+      "productId": "ml9xzk7jaf236oxsf",
+      "productName": "Seagate 1TB HDD",
+      "productSku": "HDD001",
+      "type": "in",
+      "quantity": 45,
+      "previousStock": 0,
+      "newStock": 45,
+      "reason": "Sayım düzeltmesi",
+      "createdAt": "2026-02-04T23:12:50.317Z"
+    }
+  ]
+}

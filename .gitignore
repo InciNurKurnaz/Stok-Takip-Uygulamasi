@@ -1,0 +1,17 @@
+# Geçici dosyalar
+*.pyc
+__pycache__/
+*.pyo
+
+# IDE dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log

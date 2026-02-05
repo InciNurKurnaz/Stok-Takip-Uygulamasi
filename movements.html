@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Hareketleri - Stok Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-exchange-alt"></i> Stok Hareketleri</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Ürünler</a>
+                <a href="movements.html" class="nav-link active">Hareketler</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </header>
+
+        <!-- Stok Hareketi Ekleme -->
+        <section class="movement-section">
+            <h2>Yeni Stok Hareketi</h2>
+            <form id="movementForm" class="movement-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productSelect">Ürün Seçin:</label>
+                        <select id="productSelect" required>
+                            <option value="">-- Ürün Seçin --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="movementType">Hareket Türü:</label>
+                        <select id="movementType" required>
+                            <option value="">-- Seçin --</option>
+                            <option value="in">📥 Stok Girişi (+)</option>
+                            <option value="out">📤 Stok Çıkışı (-)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">Miktar:</label>
+                        <input type="number" id="quantity" min="1" required placeholder="Miktar girin">
+                        <small id="stockInfo" style="color: #718096; font-size: 12px; margin-top: 5px;"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Açıklama/Sebep:</label>
+                        <input type="text" id="reason" required placeholder="Örn: Satış, Alım, Sayım Düzeltmesi">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Hareketi Kaydet
+                </button>
+            </form>
+        </section>
+
+        <!-- Mevcut Stok Durumu -->
+        <section class="current-stock-section">
+            <h2>Anlık Stok Durumu</h2>
+            <div id="stockSummary" class="stock-summary">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+            <div class="stock-grid" id="stockGrid">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+        </section>
+
+        <!-- Hareket Geçmişi -->
+        <section class="movement-history-section">
+            <div class="section-header">
+                <h2>Hareket Geçmişi</h2>
+                <div class="filter-actions">
+                    <select id="filterProduct">
+                        <option value="">Tüm Ürünler</option>
+                    </select>
+                    <select id="filterType">
+                        <option value="">Tüm Hareketler</option>
+                        <option value="in">📥 Sadece Girişler</option>
+                        <option value="out">📤 Sadece Çıkışlar</option>
+                    </select>
+                    <select id="filterPeriod">
+                        <option value="">Tüm Zamanlar</option>
+                        <option value="today">Bugün</option>
+                        <option value="week">Son 7 Gün</option>
+                        <option value="month">Son 30 Gün</option>
+                    </select>
+                    <button id="clearHistory" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Geçmişi Temizle
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="movementsTable" class="movements-table">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Ürün</th>
+                            <th>SKU</th>
+                            <th>Tür</th>
+                            <th>Miktar</th>
+                            <th>Önceki Stok</th>
+                            <th>Yeni Stok</th>
+                            <th>Açıklama</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movementsTableBody">
+                        <!-- JavaScript ile doldurulacak -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts - script.js ÖNCE yüklenmeli! -->
+    <script src="script.js"></script>
+    <script src="movements.js"></script>
+</body>
+</html>

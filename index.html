@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-boxes"></i> Stok Takip Sistemi</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Ürünler</a>
+                <a href="movements.html" class="nav-link">Hareketler</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </header>
+
+        <!-- Ana İçerik -->
+        <main class="main">
+            <!-- Ürün Ekleme Formu -->
+            <section class="add-product-section">
+                <h2>Yeni Ürün Ekle</h2>
+                <form id="productForm" class="product-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sku">SKU Kodu:</label>
+                            <input type="text" id="sku" required placeholder="Örn: ABC001">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Ürün Adı:</label>
+                            <input type="text" id="name" required placeholder="Ürün adını girin">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="description">Açıklama:</label>
+                            <textarea id="description" rows="3" placeholder="Ürün açıklaması"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quantity">Mevcut Miktar:</label>
+                            <input type="number" id="quantity" min="0" required placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="minStock">Minimum Stok:</label>
+                            <input type="number" id="minStock" min="0" required placeholder="0">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Ürün Ekle
+                    </button>
+                </form>
+            </section>
+
+            <!-- Ürün Listesi -->
+            <section class="product-list-section">
+                <div class="section-header">
+                    <h2>Ürün Listesi</h2>
+                    <div class="actions">
+                        <button onclick="addTestData()" class="btn btn-info" title="Örnek veri ekle">
+                            <i class="fas fa-flask"></i> Örnek Veri
+                        </button>
+                        <button onclick="exportToJSON()" class="btn btn-success" title="JSON olarak kaydet">
+                            <i class="fas fa-save"></i> JSON Kaydet
+                        </button>
+                        <input type="file" id="importJsonFile" accept=".json" style="display: none;" onchange="importFromJSON(event)">
+                        <button onclick="document.getElementById('importJsonFile').click()" class="btn btn-success" title="JSON'dan yükle">
+                            <i class="fas fa-folder-open"></i> JSON Yükle
+                        </button>
+                        <button id="exportBtn" class="btn btn-secondary">
+                            <i class="fas fa-file-csv"></i> CSV Export
+                        </button>
+                        <input type="file" id="importFile" accept=".csv" style="display: none;">
+                        <button id="importBtn" class="btn btn-secondary">
+                            <i class="fas fa-file-csv"></i> CSV Import
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="productsTable" class="products-table">
+                        <thead>
+                            <tr>
+                                <th>SKU</th>
+                                <th>Ürün Adı</th>
+                                <th>Açıklama</th>
+                                <th>Miktar</th>
+                                <th>Min. Stok</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Düzenleme Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Ürün Düzenle</h3>
+            <form id="editForm">
+                <input type="hidden" id="editIndex">
+                <div class="form-group">
+                    <label for="editSku">SKU Kodu:</label>
+                    <input type="text" id="editSku" required>
+                </div>
+                <div class="form-group">
+                    <label for="editName">Ürün Adı:</label>
+                    <input type="text" id="editName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescription">Açıklama:</label>
+                    <textarea id="editDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editQuantity">Mevcut Miktar:</label>
+                    <input type="number" id="editQuantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMinStock">Minimum Stok:</label>
+                    <input type="number" id="editMinStock" min="0" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeEditModal()">İptal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
+    <script src="export-import.js"></script>
+</body>
+</html>
